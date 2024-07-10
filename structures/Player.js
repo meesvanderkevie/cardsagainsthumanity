@@ -28,7 +28,7 @@ module.exports = class Player {
 		this.dealHand();
 		try {
 			const extra = await this.chooseCards(black, chosenCards);
-			if (!this.user.bot) await this.user.send(`Nice! Return to ${this.game.channel} to await the results!`);
+			if (!this.user.bot) await this.user.send(`Nice! Ga terug naar ${this.game.channel} om de resultaten af te wachten!`);
 			return extra;
 		} catch (err) {
 			this.strikes++;
@@ -116,8 +116,8 @@ module.exports = class Player {
 			**Strikes:** ${this.strikes}/3
 
 			Pick **${black.pick}** card${black.pick > 1 ? 's' : ''}!
-			_Type \`gamble\` to exchange a point for an extra play._
-			_Type \`swap\` to exchange a point for a new hand._
+			_Type \`gamble\` om een punt te verhandelen voor een extra play._
+			_Type \`swap\` om een punt te verhandelen voor een nieuwe hand._
 		`);
 	}
 };
