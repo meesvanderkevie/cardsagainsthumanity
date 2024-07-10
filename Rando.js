@@ -2,8 +2,8 @@ require('dotenv').config();
 const { RANDO_TOKEN, RANDO_PREFIX, OWNERS, INVITE } = process.env;
 const Client = require('./structures/Client');
 const client = new Client({
-	prefix: RANDO_PREFIX.split('||'),
-	ownerID: OWNERS.split(','),
+	prefix: RANDO_PREFIX,
+	ownerID: OWNERS,
 	disabledEvents: ['TYPING_START']
 });
 const { stripIndents } = require('common-tags');
