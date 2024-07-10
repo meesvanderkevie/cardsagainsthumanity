@@ -43,7 +43,7 @@ module.exports = class Game {
 		const max = bot ? 9 : 10;
 		const min = bot ? 2 : 3;
 		await msg.util.sendNew(
-			`You will need at least ${min - 1} more player${min - 1 === 1 ? '' : 's'}. To join, type \`join game\`.`
+			`Je hebt minstens ${min - 1} meer spelers nodig ${min - 1 === 1 ? '' : 's'}. Om te joinen, type \`join game\`.`
 		);
 		const joined = [];
 		joined.push(msg.author.id);
