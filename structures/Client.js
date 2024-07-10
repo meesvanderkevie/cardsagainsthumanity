@@ -21,14 +21,14 @@ module.exports = class Client extends AkairoClient {
 			defaultPrompt: {
 				modifyStart: (text, msg) => stripIndents`
 					${msg.author}, ${text}
-					Respond with \`cancel\` to cancel the command. The command will automatically be cancelled in 30 seconds.
+					Antwoord met \`cancel\` om het commando te anuleren. Dit commando zal automatisch worden geanuleerd in 30 seconden.
 				`,
 				modifyRetry: (text, msg) => stripIndents`
 					${msg.author}, ${text}
-					Respond with \`cancel\` to cancel the command. The command will automatically be cancelled in 30 seconds.
+					Antwoord met \`cancel\` om het commando te anuleren. Dit commando zal automatisch worden geanuleerd in 30 seconden.
 				`,
-				timeout: msg => `${msg.author}, cancelled command.`,
-				ended: msg => `${msg.author}, 2 tries and you still don't understand, cancelled command.`,
+				timeout: msg => `${msg.author}, commando geanuleerd. Je hebt te lang gewacht.`,
+				ended: msg => `${msg.author}, 2 kansen en nog steeds begrijp je het niet, commando geanuleerd.`,
 				cancel: msg => `${msg.author}, cancelled command.`,
 				retries: 2,
 				stopWord: 'finish'
